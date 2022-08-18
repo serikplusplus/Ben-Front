@@ -261,3 +261,43 @@ $(document).ready(function () {
 		],
 	})
 })
+$(document).ready(function () {
+	const burger = document.querySelector('.burger')
+	const nav = document.querySelector('.main-nav')
+	const btnclose = document.querySelector('.close-nav')
+
+	burger.addEventListener('click', () => {
+		nav.classList.add('open')
+	})
+	btnclose.addEventListener('click', () => {
+		nav.classList.remove('open')
+	})
+})
+$(document).ready(function () {
+	const num = document.querySelector('.promo__num')
+	const price = document.querySelector('.promo__price span')
+	const minus = document.querySelector('.promo__controls-btn.btn-minus')
+	const plus = document.querySelector('.promo__controls-btn.btn-plus')
+
+	let numS = +num.textContent
+	let priceS = +price.textContent
+	let priceN = priceS
+
+	minus.addEventListener('click', () => {
+		if (numS >= 2) {
+			numS--
+			priceN -= priceS
+
+			num.textContent = numS
+			price.textContent = priceN.toFixed(2)
+		}
+	})
+
+	plus.addEventListener('click', () => {
+		numS++
+		priceN += priceS
+
+		num.textContent = numS
+		price.textContent = priceN.toFixed(2)
+	})
+})
