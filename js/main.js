@@ -247,9 +247,17 @@ $(document).ready(function () {
 		infinite: true,
 		slidesToShow: 3,
 		slidesToScroll: 1,
-		infinite: true,
 		arrows: true,
 		prevArrow: $('.prev-arrow'),
 		nextArrow: $('.next-arrow'),
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+					arrows: false,
+					slidesToShow: 2,
+				},
+			},
+		],
 	})
 })
