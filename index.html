@@ -23,9 +23,13 @@
 
 		<div class="bg site-wrapper">
 			<header class="container-lrg main-header">
-				<div class="main-header__inner">
+				<div class="main-header__inner grid grid-3">
+					<button class="flex f-col fj-between burger">
+						<span></span><span></span><span></span>
+					</button>
 					<nav class="main-nav">
 						<ul class="main-nav__list">
+							<button class="close-nav"></button>
 							<li class="main-nav__elem">
 								<a href="" class="main-nav__link">SANITIZING WIPES</a>
 							</li>
@@ -43,10 +47,13 @@
 							</li>
 						</ul>
 					</nav>
-					<a href="" class="main-logo">
-						<img class="main-logo__img" src="img/main-logo.png" alt="" />
-						<span>KNEZ</span>
-					</a>
+					<div class="flex fj-center logo__wrapper">
+						<a href="" class="main-logo">
+							<img class="main-logo__img" src="img/main-logo.png" alt="" />
+							<span>KNEZ</span>
+						</a>
+					</div>
+
 					<nav class="user-nav">
 						<ul class="user-nav__list">
 							<li class="user-nav__elem">
@@ -65,7 +72,7 @@
 									</svg>
 								</a>
 							</li>
-							<li class="user-nav__elem">
+							<li class="user-nav__elem user-nav__backet">
 								<a href="" class="user-nav__link"
 									><svg
 										width="28"
@@ -138,8 +145,8 @@
 								<div class="flex fa-center promo__controls">
 									<button class="flex f-center promo__controls-btn btn-minus">
 										<svg
-											width="15"
-											height="2"
+											width="18"
+											height="4"
 											viewBox="0 0 15 2"
 											fill="none"
 											xmlns="http://www.w3.org/2000/svg"
@@ -156,8 +163,8 @@
 									<span class="promo__num">1</span>
 									<button class="flex f-center promo__controls-btn btn-plus">
 										<svg
-											width="15"
-											height="15"
+											width="18"
+											height="18"
 											viewBox="0 0 15 15"
 											fill="none"
 											xmlns="http://www.w3.org/2000/svg"
@@ -178,8 +185,11 @@
 				<section class="ingredients main__ingredients">
 					<h2 class="title title_upper ingredients__title">INGREDIENTS</h2>
 					<ul class="flex f-wrap fj-center ingredients__list">
-						<li class="flex f-col fj-end ingredients__item">
-							<img class="ingredients__img" src="img/alkohol.png" alt="" />
+						<li class="flex f-col fj-start ingredients__item">
+							<div class="ingredients__img flex f-center">
+								<img src="img/alkohol.png" alt="" />
+							</div>
+
 							<h4 class="ingredients__name">Alcohol (from Sugar Cane)</h4>
 							<p class="ingredients__text">
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -187,8 +197,11 @@
 							</p>
 							<hr class="mx-auto ingredients__hr" />
 						</li>
-						<li class="flex f-col fj-end ingredients__item">
-							<img class="ingredients__img" src="img/water.png" alt="" />
+						<li class="flex f-col fj-start ingredients__item">
+							<div class="ingredients__img flex f-center">
+								<img src="img/water.png" alt="" />
+							</div>
+
 							<h4 class="ingredients__name">Water</h4>
 							<p class="ingredients__text">
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -196,8 +209,11 @@
 							</p>
 							<hr class="mx-auto ingredients__hr" />
 						</li>
-						<li class="flex f-col fj-end ingredients__item">
-							<img class="ingredients__img" src="img/aloe.png" alt="" />
+						<li class="flex f-col fj-start ingredients__item">
+							<div class="ingredients__img flex f-center">
+								<img src="img/aloe.png" alt="" />
+							</div>
+
 							<h4 class="ingredients__name">AloE-Vera</h4>
 							<p class="ingredients__text">
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -205,8 +221,11 @@
 							</p>
 							<hr class="mx-auto ingredients__hr" />
 						</li>
-						<li class="flex f-col fj-end ingredients__item">
-							<img class="ingredients__img" src="img/lemon.png" alt="" />
+						<li class="flex f-col fj-start ingredients__item">
+							<div class="ingredients__img flex f-center">
+								<img src="img/lemon.png" alt="" />
+							</div>
+
 							<h4 class="ingredients__name">Lemon (Peel)</h4>
 							<p class="ingredients__text">
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -214,8 +233,11 @@
 							</p>
 							<hr class="mx-auto ingredients__hr" />
 						</li>
-						<li class="flex f-col fj-end ingredients__item">
-							<img class="ingredients__img" src="img/grapefruit.png" alt="" />
+						<li class="flex f-col fj-start ingredients__item">
+							<div class="ingredients__img flex f-center">
+								<img src="img/grapefruit.png" alt="" />
+							</div>
+
 							<h4 class="ingredients__name">Grapefruit (Peel)</h4>
 							<p class="ingredients__text">
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
