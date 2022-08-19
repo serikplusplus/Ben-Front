@@ -52,8 +52,10 @@ img {
 	padding: var(--space-lrg) 0 var(--space-med);
 }
 @media only screen and (max-width: 480px) {
-	.main-header__inner {
+	.main-header {
 		background-color: var(--white);
+	}
+	.main-header__inner {
 		padding: var(--space-lrg) 0 var(--space-sml);
 	}
 }
@@ -458,7 +460,7 @@ img {
 }
 
 .story__img {
-	width: 100%;
+	justify-self: center;
 	mix-blend-mode: darken;
 }
 .story__title {
@@ -691,3 +693,4 @@ img {
 		line-height: 1.4em;
 	}
 }
+
