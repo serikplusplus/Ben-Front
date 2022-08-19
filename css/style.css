@@ -5,12 +5,31 @@ ol {
 a {
 	text-decoration: none;
 }
-
+img {
+	max-width: 100%;
+}
 .title {
 	text-align: center;
 }
 .title_upper {
 	padding: var(--space-xlrg) 0;
+}
+
+.ibg {
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+}
+
+.ibg img {
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	visibility: hidden;
 }
 
 .bg {
@@ -32,6 +51,12 @@ a {
 .main-header__inner {
 	padding: var(--space-lrg) 0 var(--space-med);
 }
+@media only screen and (max-width: 480px) {
+	.main-header__inner {
+		background-color: var(--white);
+		padding: var(--space-lrg) 0 var(--space-sml);
+	}
+}
 .main-header__inner.grid-3 {
 	grid-template-columns: 1fr 1fr 0.8fr;
 	grid-template-areas:
@@ -41,7 +66,7 @@ a {
 @media only screen and (max-width: 991px) {
 	.main-header__inner.grid-3 {
 		align-items: center;
-		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-columns: 1fr 2.5fr 1fr;
 		grid-template-areas: 'header-left header-logo header-right';
 	}
 }
@@ -170,7 +195,7 @@ a {
 }
 @media only screen and (max-width: 560px) {
 	.main-header__inner.grid-3 {
-		gap: 36px;
+		gap: 15px;
 	}
 	.main-nav {
 		width: 80%;
@@ -208,12 +233,26 @@ a {
 .top-descr__header {
 	max-width: 719px;
 }
+
 .top-descr__text {
 	padding: 0 var(--space-med);
+	font-size: 1.25rem;
+	line-height: 1.3em;
 }
 .top-descr__hr {
 	margin-top: var(--space-med);
 	width: 200px;
+}
+@media only screen and (max-width: 480px) {
+	.top-descr__header {
+		font-size: 2.25rem;
+		line-height: 1.1em;
+	}
+	.top-descr__text {
+		padding: 0;
+		font-size: 1rem;
+		line-height: 1.3em;
+	}
 }
 
 .promo {
@@ -375,6 +414,18 @@ a {
 .spollers__title {
 	margin-bottom: 0;
 }
+@media only screen and (max-width: 991px) {
+	.spollers__title {
+		font-size: 1.5rem;
+		line-height: 1.7em;
+	}
+}
+@media only screen and (max-width: 480px) {
+	.spollers__title {
+		font-size: 1.12rem;
+		line-height: 1.22em;
+	}
+}
 
 .spollers__body {
 	padding: var(--space-sml);
@@ -388,11 +439,16 @@ a {
 ._spoller-init .spollers__btn-close {
 	width: 45px;
 	height: 45px;
-	right: 40px;
+	right: 30px;
 	top: 50%;
 	transform: translateY(-50%);
 	border: 1px solid var(--grey-light);
 	border-radius: 50%;
+}
+@media only screen and (max-width: 480px) {
+	._spoller-init .spollers__btn-close {
+		right: 15px;
+	}
 }
 ._spoller-init .spollers__btn-close svg {
 	transition: transform 0.5s linear;
@@ -469,7 +525,7 @@ a {
 }
 @media only screen and (max-width: 530px) {
 	.contact__title {
-		font-size: 2.5rem;
+		font-size: 1.75rem;
 		line-height: 1em;
 	}
 	.contact__form {
@@ -491,7 +547,7 @@ a {
 	padding-bottom: var(--space-med);
 }
 @media only screen and (max-width: 991px) {
-	.main-logo {
+	.footer__logo {
 		font-size: 3.1rem;
 		line-height: 1.2em;
 	}
@@ -558,4 +614,80 @@ a {
 }
 .footer__col-link {
 	color: var(--beige-dark);
+}
+
+@media only screen and (max-width: 480px) {
+	.faq-footer::after {
+		content: '';
+		position: absolute;
+		top: -36px;
+		left: 0;
+		right: 0;
+		width: 100%;
+		height: 50px;
+		background: url('../img/waves.svg');
+		background-position: top center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+}
+.double-descr__text {
+	font-size: 1.25rem;
+	line-height: 1.3em;
+}
+@media only screen and (max-width: 480px) {
+	.double-descr__text {
+		font-size: 1rem;
+	}
+}
+
+.big-img__img {
+	height: 690px;
+}
+@media only screen and (max-width: 991px) {
+	.big-img__img {
+		height: 561px;
+	}
+}
+@media only screen and (max-width: 480px) {
+	.big-img__img {
+		height: 432px;
+	}
+}
+.info__item.grid-2 {
+	padding: var(--space-med) 0;
+	grid-template-columns: 1fr 1fr;
+	gap: 40px;
+	align-items: center;
+	justify-content: space-between;
+}
+.info__title {
+	text-transform: uppercase;
+}
+.info__img_even {
+	order: 1;
+	justify-self: flex-end;
+}
+@media only screen and (max-width: 665px) {
+	.info__item.grid-2 {
+		padding: var(--space-sml) 0;
+		grid-template-columns: 1fr;
+		gap: 60px;
+	}
+	.info__img {
+		max-width: 294px;
+		justify-self: center;
+	}
+}
+.descr__title {
+	max-width: 900px;
+	font-size: 1.87rem;
+	line-height: 1.4em;
+	text-transform: uppercase;
+}
+@media only screen and (max-width: 530px) {
+	.descr__title {
+		font-size: 1.12rem;
+		line-height: 1.4em;
+	}
 }

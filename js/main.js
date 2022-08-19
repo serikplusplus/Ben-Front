@@ -243,23 +243,25 @@ $(document).ready(function () {
 	}
 })
 $(document).ready(function () {
-	$('.follow__slider-wrapper').slick({
-		infinite: true,
-		slidesToShow: 3,
-		slidesToScroll: 1,
-		arrows: true,
-		prevArrow: $('.prev-arrow'),
-		nextArrow: $('.next-arrow'),
-		responsive: [
-			{
-				breakpoint: 768,
-				settings: {
-					arrows: false,
-					slidesToShow: 2,
+	if ($('.follow__slider-wrapper')) {
+		$('.follow__slider-wrapper').slick({
+			infinite: true,
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			arrows: true,
+			prevArrow: $('.prev-arrow'),
+			nextArrow: $('.next-arrow'),
+			responsive: [
+				{
+					breakpoint: 768,
+					settings: {
+						arrows: false,
+						slidesToShow: 2,
+					},
 				},
-			},
-		],
-	})
+			],
+		})
+	}
 })
 $(document).ready(function () {
 	const burger = document.querySelector('.burger')
@@ -274,30 +276,43 @@ $(document).ready(function () {
 	})
 })
 $(document).ready(function () {
-	const num = document.querySelector('.promo__num')
-	const price = document.querySelector('.promo__price span')
-	const minus = document.querySelector('.promo__controls-btn.btn-minus')
-	const plus = document.querySelector('.promo__controls-btn.btn-plus')
+	if (document.querySelector('.promo__num')) {
+		const num = document.querySelector('.promo__num')
+		const price = document.querySelector('.promo__price span')
+		const minus = document.querySelector('.promo__controls-btn.btn-minus')
+		const plus = document.querySelector('.promo__controls-btn.btn-plus')
 
-	let numS = +num.textContent
-	let priceS = +price.textContent
-	let priceN = priceS
+		let numS = +num.textContent
+		let priceS = +price.textContent
+		let priceN = priceS
 
-	minus.addEventListener('click', () => {
-		if (numS >= 2) {
-			numS--
-			priceN -= priceS
+		minus.addEventListener('click', () => {
+			if (numS >= 2) {
+				numS--
+				priceN -= priceS
+
+				num.textContent = numS
+				price.textContent = priceN.toFixed(2)
+			}
+		})
+
+		plus.addEventListener('click', () => {
+			numS++
+			priceN += priceS
 
 			num.textContent = numS
 			price.textContent = priceN.toFixed(2)
+		})
+	}
+})
+
+$(document).ready(function () {
+	const ibg = document.querySelectorAll('.ibg')
+	for (let i = 0; i < ibg.length; i++) {
+		if (ibg[i].querySelector('img')) {
+			ibg[i].style.backgroundImage = `url(${ibg[i]
+				.querySelector('img')
+				.getAttribute('src')})`
 		}
-	})
-
-	plus.addEventListener('click', () => {
-		numS++
-		priceN += priceS
-
-		num.textContent = numS
-		price.textContent = priceN.toFixed(2)
-	})
+	}
 })
